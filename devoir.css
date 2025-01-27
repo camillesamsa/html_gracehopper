@@ -1,0 +1,74 @@
+@font-face {
+  font-family: "Photograph_Signature";
+  src:
+    url("photograph_signature/Photograph_Signature.ttf") format("opentype"); /*Définition de la police nommée "Photograph Signature" */
+}
+
+html {
+  scroll-behavior: smooth; /*Défilement fluide pour aller de section en section*/
+}
+
+body { /*Définition d'un style global pour les éléments contenus dans le <body>*/
+  background: #2c2c2c; /*Définition de la couleur du fond*/
+  color: rgb(248, 248, 242); /*Définition de la couleur du texte*/
+  font-size: 17px; /*Définition de la taille du texte dans les paragraphes*/
+}
+
+.titre-page {
+  font-family: "Photograph_Signature"; /*Utilisation de la police "Photograph Signature" pour le titre de la page*/
+  font-size: 200%; /*Définition d'une taille de police*/
+  text-align: center; /*Centre le texte*/
+}
+
+h2{
+  font-family: "Photograph_Signature"; /*Utilise la police "Photograph_Signature" pour les titres des paragraphes*/
+  font-size: 45px; /*Définit la taille du texte*/
+  color: orange; /*Définit la couleur du texte*/
+}
+
+nav { /*Définition du style général de la navigation*/
+  display: flex; /*Utilise le modèle flexbox*/
+  flex-wrap: wrap; /**/
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%; /*Largeur de navigation sur l'écran : 100%*/
+}
+
+nav a { /*Définition du style et de la disposition du contenu des balises <nav>*/
+  text-decoration: none;
+  color: rgb(248, 248, 242);
+  transition: color 0.4s ease; /*Lorsque la couleur change, l'effet est progressif*/
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+nav a:hover {
+  color: orange; /*Au survol, la couleur du lien devient orange*/
+}
+
+.contenu {
+  display: flex; /*Les éléments du contenu sont organisé en fonction du modèle flexbox*/
+  flex-direction: row; /*Les éléments du contenu sont disposé en ligne horizontale*/
+}
+
+.corps { /*Définition de la disposition de "corps"*/
+  margin-left: 12px;
+  margin-right: 25px;
+  flex-basis: 80%;
+}
+
+.encart { /*Définition de la dispositon de "encart"*/
+  margin-left: 20px;
+  margin-right: 50px;
+  font-size: 80%;
+  border: solid 1px white;
+  height: 100%;
+  flex-basis: 20%;
+} 
+
+@media (max-width: 768px) { /*Règle media query applique le style à tous les écrans ayant une largeur maximale de 768px*/
+  .contenu{ 
+    flex-direction: column-reverse; /*Pour les petits écrans, le contenu dispose ses éléments verticalement*/
+  }
